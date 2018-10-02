@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected Button btHomepage;
     protected Button btDial;
     protected Button btCall;
+    protected Button btSms;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btHomepage = (Button) findViewById(R.id.button);
         btDial = (Button) findViewById(R.id.btDial);
        btCall=(Button) findViewById(R.id.btCall);
+        btSms =(Button) findViewById(R.id.btSms);
         btHomepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("Tel:01041144105"));
                 startActivity(intent);
+            }
+        });
+
+        btSms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:01041144105"));
+                intent.putExtra("sms_body","Mokwon_University");
+                //putExtra = 문자로 보내고 싶은 내용과 이름을 지정한다.
+                startActivity(intent);
+
             }
         });
     }

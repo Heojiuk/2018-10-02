@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     protected Button btHomepage;
@@ -13,16 +14,21 @@ public class MainActivity extends AppCompatActivity {
     protected Button btCall;
     protected Button btSms;
     protected Button btMap;
-
+    protected Button btSpeech;
+    protected TextView tvSpeech;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         btHomepage = (Button) findViewById(R.id.button);
         btDial = (Button) findViewById(R.id.btDial);
         btCall=(Button) findViewById(R.id.btCall);
         btSms =(Button) findViewById(R.id.btSms);
         btMap =(Button) findViewById(R.id.btMap);
+        btSpeech =(Button) findViewById(R.id.btspeech);
+
+        tvSpeech = (TextView) findViewById(R.id.tvSpeech);
 
         btHomepage.setOnClickListener(new View.OnClickListener() {
             @Override

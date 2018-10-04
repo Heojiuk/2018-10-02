@@ -21,26 +21,53 @@
         android:text="DAIL"
 
 
-      />
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="67dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btCall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Call"
-    />
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/btSms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SMS"
-        android:id="@+id/btSms"
-        />
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
+        android:id="@+id/btMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btMap"
         android:text="MAP"
-        />
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="67dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btspeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speech"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="67dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvSpeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice TextView"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="157dp"
+        tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>

@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected Button btDial;
     protected Button btCall;
     protected Button btSms;
-
+    protected Button btMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btHomepage = (Button) findViewById(R.id.button);
         btDial = (Button) findViewById(R.id.btDial);
-       btCall=(Button) findViewById(R.id.btCall);
+        btCall=(Button) findViewById(R.id.btCall);
         btSms =(Button) findViewById(R.id.btSms);
+        btMap =(Button) findViewById(R.id.btMap);
+
         btHomepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 //putExtra = 문자로 보내고 싶은 내용과 이름을 지정한다.
                 startActivity(intent);
 
+            }
+        });
+
+        btMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:36.321609,127.337957?z=20")); // ""를 parse 해서  Uri에 넣어준다.
+                startActivity(intent);
             }
         });
     }
